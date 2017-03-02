@@ -62,13 +62,20 @@ function showDetails() {
 
 function addKeyPressHandler() {
     'use strict';
+    var thumbnails = getThumbnailsArray();
     document.body.addEventListener('keyup', function(event) {
         event.preventDefault();
         if (event.keyCode === ESC_KEY) {
             hideDetails();
         }
+        //This is for Numbers 1-9 above the keyboard (not numpad)
+        if ((event.keyCode >= 49) && (event.keyCode <= 57)){
+            setDetailsFromThumb(thumbnails[event.keyCode - 49]);
+            showDetails();
+        }
     });
 }
+
 
 
 function initializeEvents() {
