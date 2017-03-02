@@ -65,6 +65,7 @@ function addKeyPressHandler() {
     var thumbnails = getThumbnailsArray();
     document.body.addEventListener('keyup', function(event) {
         event.preventDefault();
+        console.log(event.KeyCode);
         if (event.keyCode === ESC_KEY) {
             hideDetails();
         }
