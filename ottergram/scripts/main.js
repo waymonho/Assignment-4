@@ -76,8 +76,6 @@ function addKeyPressHandler() {
     });
 }
 
-
-
 function initializeEvents() {
     'use strict';
     var thumbnails = getThumbnailsArray();
